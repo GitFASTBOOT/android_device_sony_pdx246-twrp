@@ -37,6 +37,9 @@ on early-init
     insmod vendor/lib/modules/usb_f_diag.ko
     insmod vendor/lib/modules/usb_f_gsi.ko
     insmod vendor/lib/modules/usb_f_qdss.ko
+    insmod vendor/lib/modules/charger-ulog-glink.ko
+    insmod vendor/lib/modules/qti_battery_charger_main.ko
+    insmod vendor/lib/modules/qti_battery_debug.ko
 
 on init
     write /sys/class/backlight/panel0-backlight/brightness 200
