@@ -26,8 +26,17 @@
 #
 
 # Load modules
-insmod vendor/lib/modules/focaltech_tp.ko
-insmod vendor/lib/modules/goodix_core.ko
+on early-init
+    insmod vendor/lib/modules/focaltech_tp.ko
+    insmod vendor/lib/modules/goodix_core.ko
+    insmod vendor/lib/modules/phy-msm-ssusb-qmp.ko
+    insmod vendor/lib/modules/snd-usb-audio-qmi.ko
+    insmod vendor/lib/modules/usb_bam.ko
+    insmod vendor/lib/modules/usb_f_ccid.ko
+    insmod vendor/lib/modules/usb_f_cdev.ko
+    insmod vendor/lib/modules/usb_f_diag.ko
+    insmod vendor/lib/modules/usb_f_gsi.ko
+    insmod vendor/lib/modules/usb_f_qdss.ko
 
 on init
     write /sys/class/backlight/panel0-backlight/brightness 200
